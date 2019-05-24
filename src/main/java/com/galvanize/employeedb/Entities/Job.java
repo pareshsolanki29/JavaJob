@@ -24,6 +24,25 @@ public class Job {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long jobID;
 
+    @Override
+    public String toString() {
+        return "Job{" +
+                "jobID=" + jobID +
+                ", Customer='" + Customer + '\'' +
+                ", hireDate=" + hireDate +
+                ", endDate=" + endDate +
+                ", employee=" + employee +
+                '}';
+    }
+
+    public String getCustomer() {
+        return Customer;
+    }
+
+    public void setCustomer(String customer) {
+        Customer = customer;
+    }
+
     private String Customer;
     private Date hireDate;
     private Date endDate;
